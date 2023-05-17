@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,9 +8,12 @@ public class RandomSpawner : MonoBehaviour
 {
     [Header("Shape")]
     [SerializeField] private GameObject[] shapePrefabList;
+
+    [Header("ShapeSpawn")] 
+    [SerializeField] private GameObject[] shapeGameObjectsSpawned;
     
     [Header("Shape Count")]
-    [SerializeField] private float spawnCount;
+    [SerializeField,Range(0, 100)] private int spawnCount;
     
     [Header("Spawn Range")]
     [SerializeField] private float xRange;
@@ -24,8 +27,9 @@ public class RandomSpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, shapePrefabList.Length);
 
-            Vector3 randomeSpawnPosition = new Vector3(Random.Range(-xRange, xRange), yRange, Random.Range(-zRange, zRange));
+            Vector3 randomeSpawnPosition = new Vector3(Random.Range(-xRange, xRange) + gameObject.transform.position.x, yRange, Random.Range(-zRange, zRange) + gameObject.transform.position.z);
             Instantiate(shapePrefabList[randomIndex], randomeSpawnPosition, Quaternion.identity);
+            
         }
     }
 
