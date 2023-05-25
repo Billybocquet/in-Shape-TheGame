@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GravityGun : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class GravityGun : MonoBehaviour
     [SerializeField] private bool CanThrow;
     [SerializeField] private bool CanMove;
     [SerializeField] private bool CanRotate;
+
+    [Header("Input Action")]
+    [SerializeField] private InputAction grabAction;
+    [SerializeField] private InputAction throwAction;
     
     [Header("Camera")]
     [SerializeField] private Camera cam;
@@ -53,6 +58,10 @@ public class GravityGun : MonoBehaviour
     {
         objectHolder.localPosition = holderOrigin;
         forwardMove = holderOrigin.z;
+        
+        grabAction.performed += ctx => { Grab(ctx); };
+        grabAction.canceled += ctx => { Grab(ctx); };
+        throwAction.performed += ctx => { ThrowGrabbed(ctx); };
     }
 
     // Update is called once per frame
@@ -60,7 +69,7 @@ public class GravityGun : MonoBehaviour
     {
         if (CanGravityGun)
         {
-            Grab();
+            /*Grab();*/
             
             if (CanRotate)
                 RotateGrabbed();
@@ -68,20 +77,20 @@ public class GravityGun : MonoBehaviour
             if(CanMove)
                 MoveGrabbed();
             
-            if(CanThrow)
-                ThrowGrabbed();
+            /*if(CanThrow)
+                ThrowGrabbed();*/
 
         }
     }
 
-    private void Grab()
+    private void Grab(InputAction.CallbackContext context)
     {
         if (grabbedRB)
         {
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position, Time.deltaTime * lerpSpeed));
         }
         
-        if (Input.GetKeyDown(grabButton))
+        if (context.performed)
         {
             if (grabbedRB)
             {
@@ -166,11 +175,11 @@ public class GravityGun : MonoBehaviour
         }
     }
 
-    private void ThrowGrabbed()
+    private void ThrowGrabbed(InputAction.CallbackContext context)
     {
         if (grabbedRB)
         {
-            if (Input.GetKeyDown(throwButton))
+            if (context.performed)
             {
                 grabbedRB.isKinematic = false;
                 grabbedRB.AddForce(cam.transform.forward * throwForce, ForceMode.VelocityChange);

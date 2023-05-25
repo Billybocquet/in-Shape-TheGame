@@ -2986,7 +2986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &359227684
 Transform:
   m_ObjectHideFlags: 0
@@ -3031,7 +3031,7 @@ MonoBehaviour:
   - {fileID: 5835228979150071024, guid: 183a9696e2ffd6a4ab3168607c113fe7, type: 3}
   - {fileID: 5073079001585206076, guid: 1a117f344bc9a3b4482ff5eb830138fe, type: 3}
   shapeGameObjectsSpawned: []
-  spawnCount: 10
+  spawnCount: 1
   xRange: 9
   yRange: 3
   zRange: 9
@@ -5953,6 +5953,24 @@ MonoBehaviour:
   CanThrow: 0
   CanMove: 0
   CanRotate: 0
+  grabAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  throwAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   cam: {fileID: 1008545239}
   maxGrabDistance: 10
   throwForce: 20
@@ -5992,10 +6010,6 @@ MonoBehaviour:
   canUseHeadBob: 1
   WillSlideOnSlopes: 1
   canZoom: 0
-  sprintKey: 304
-  jumpKey: 32
-  crouchKey: 306
-  zoomKey: 324
   moveAxis:
     m_Name: Move Axis
     m_Type: 0
@@ -7374,7 +7388,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31790
+  m_Name: pb_Mesh31792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7978,6 +7992,72 @@ MonoBehaviour:
   CanThrow: 1
   CanMove: 1
   CanRotate: 1
+  grabAction:
+    m_Name: Grab
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: debdeb0a-b170-4163-a0d3-0d60de208253
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: e86df4c2-e9b7-4117-8d3f-2caf48188aa0
+      m_Path: <XInputController>/leftTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grab
+      m_Flags: 0
+    - m_Name: 
+      m_Id: c1b8490e-02ae-4304-83cb-043da081865e
+      m_Path: <DualShockGamepad>/leftTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grab
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 05f0c2bb-f802-46ec-a7aa-8989d0386816
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grab
+      m_Flags: 0
+    m_Flags: 0
+  throwAction:
+    m_Name: Throw
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 6fa433c7-dd38-45e1-a600-48b70f9633eb
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: bf9b0b84-a521-49fa-a2f1-d72e30660b30
+      m_Path: <XInputController>/rightTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Throw
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 38ef4596-b1f9-48e3-a80b-e57be99c9cb5
+      m_Path: <DualShockGamepad>/rightTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Throw
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 211ef4ea-d077-4974-b729-c1eb69180935
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Throw
+      m_Flags: 0
+    m_Flags: 0
   cam: {fileID: 963194227}
   maxGrabDistance: 10
   throwForce: 20
@@ -8016,15 +8096,11 @@ MonoBehaviour:
   canCrouch: 1
   canUseHeadBob: 1
   WillSlideOnSlopes: 1
-  canZoom: 0
-  sprintKey: 304
-  jumpKey: 32
-  crouchKey: 306
-  zoomKey: 324
+  canZoom: 1
   moveAxis:
     m_Name: Move Axis
     m_Type: 0
-    m_ExpectedControlType: Axis
+    m_ExpectedControlType: Vector2
     m_Id: 69543d4c-8d09-454c-b9ec-3107487f2049
     m_Processors: 
     m_Interactions: 
@@ -8039,7 +8115,7 @@ MonoBehaviour:
       m_Flags: 4
     - m_Name: up
       m_Id: 05f8938e-fa5e-4489-ad22-02f99bc49f90
-      m_Path: <Keyboard>/z
+      m_Path: <Keyboard>/w
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -8055,7 +8131,7 @@ MonoBehaviour:
       m_Flags: 8
     - m_Name: left
       m_Id: 4407d0a7-d891-4a05-a1b0-9d0b6de106f1
-      m_Path: <Keyboard>/q
+      m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -8069,86 +8145,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move Axis
       m_Flags: 8
-    - m_Name: 2D Vector Xbox
-      m_Id: bd34cdcf-5e4c-4bb1-b0f2-eb4e7c9ac9f8
-      m_Path: 2DVector
+    - m_Name: 
+      m_Id: 10e2fa51-7f44-42c3-b81d-0b5ba1f497d8
+      m_Path: <XInputController>/leftStick
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move Axis
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 79699294-ae09-488d-8f6f-ef38a79d11b1
-      m_Path: <XInputController>/leftStick/up
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 59cdca0c-0b11-4498-b7ca-55667322bf0f
+      m_Path: <DualShockGamepad>/leftStick
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 4d47d815-cf62-48c4-a8fe-9d814d8aa006
-      m_Path: <XInputController>/leftStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 394cd615-3a2c-4809-bbe1-e91597c699b3
-      m_Path: <XInputController>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 6574a583-2bfb-48c3-b37a-0216e344c59f
-      m_Path: <XInputController>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: 2D Vector PlayStation
-      m_Id: 2c4a972c-f49b-485f-9eed-94d9827cb079
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 4
-    - m_Name: up
-      m_Id: de082400-f95b-44d4-bec3-456aad2bfe56
-      m_Path: <DualShockGamepad>/leftStick/up
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 0479d37b-fd1c-4ee4-adc9-bbdaa55d2238
-      m_Path: <DualShockGamepad>/leftStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: left
-      m_Id: de5ea29d-293e-4078-b3fc-057659f9a91a
-      m_Path: <DualShockGamepad>/leftStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: right
-      m_Id: d7b51b11-6bd1-4383-93bb-a3c5cab0db56
-      m_Path: <DualShockGamepad>/leftStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
+      m_Flags: 0
     m_Flags: 0
   lookAxis:
     m_Name: Look Axis
@@ -8158,86 +8170,30 @@ MonoBehaviour:
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: 2D Vector Xbox
-      m_Id: f4d2c44f-1c95-4bc3-b8ba-15d8cb8e7810
-      m_Path: 2DVector
+    - m_Name: 
+      m_Id: c5e188b7-5381-492a-b69a-3955c2eca001
+      m_Path: <Mouse>/delta
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Look Axis
-      m_Flags: 4
-    - m_Name: 2D Vector PlayStation
-      m_Id: 3d001eed-1636-4846-8c0e-59e3a5ace052
-      m_Path: 2DVector
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 439096cd-1553-43a0-8a71-66353a45eee1
+      m_Path: <XInputController>/rightStick
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Look Axis
-      m_Flags: 4
-    - m_Name: up
-      m_Id: aa619ba7-d1c8-4384-9fd6-a4e296106fdd
-      m_Path: <DualShockGamepad>/rightStick/up
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 10ceb503-afb1-42fa-a26c-aa918d204191
+      m_Path: <DualShockGamepad>/rightStick
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 563ea0a6-0352-4ee5-86e2-425ddf472650
-      m_Path: <DualShockGamepad>/rightStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 15bc61c4-de18-476a-b39e-2f22e1bde463
-      m_Path: <DualShockGamepad>/rightStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: right
-      m_Id: abd5d33d-8c34-45ed-8783-d7dd0a400c94
-      m_Path: <DualShockGamepad>/rightStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: up
-      m_Id: 84b1fa1e-2821-428e-8095-fa3434d4a2f7
-      m_Path: <XInputController>/rightStick/up
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 564f607c-8e82-4112-8f13-910a880495b5
-      m_Path: <XInputController>/rightStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: left
-      m_Id: e69d7776-4e70-4aa2-baed-ef564f0aa900
-      m_Path: <XInputController>/rightStick/left
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 4a4f2be7-2c3a-4376-8932-f9beb06bc2a9
-      m_Path: <XInputController>/rightStick/right
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 8
+      m_Flags: 0
     m_Flags: 0
   jumpAction:
     m_Name: Jump

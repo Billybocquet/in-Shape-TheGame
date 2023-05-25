@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class FirstPersonController : MonoBehaviour
 {
     public bool CanMove { get; private set; } = true;
-    private bool IsSprinting => canSprint;
+    private bool IsSprinting => canSprint && sprint;
     private bool ShouldJump => /*Input.GetKeyDown(jumpKey) &&*/ characterController.isGrounded;
     private bool ShouldCrouch => /*Input.GetKeyDown(crouchKey) &&*/ !duringCrouchAnimation && characterController.isGrounded;
 
@@ -18,12 +18,6 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool canUseHeadBob = true;
     [SerializeField] private bool WillSlideOnSlopes = true;
     [SerializeField] private bool canZoom = true;
-
-    [Header("Controls")] 
-    [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
-    [SerializeField] private KeyCode jumpKey = KeyCode.Space;
-    [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl;
-    [SerializeField] private KeyCode zoomKey = KeyCode.Mouse1;
 
     [Header("Input Action")] 
     [SerializeField] private InputAction moveAxis;
@@ -75,6 +69,7 @@ public class FirstPersonController : MonoBehaviour
     private Coroutine zoomRoutine;
     
     private Vector3 hitPointNormal;
+    private bool sprint;
 
     private bool IsSliding
     {
@@ -114,7 +109,8 @@ public class FirstPersonController : MonoBehaviour
         crouchAction.performed += ctx => { HandleCrouch(ctx); };
         zoomAction.performed += ctx => { HandleZoom(ctx); };
         zoomAction.canceled += ctx => { HandleZoom(ctx); };
-        //sprintAction.performed += ctx => { IsSprinting; };
+        sprintAction.performed += ctx => { HandleSprint(ctx); };
+        sprintAction.canceled += ctx => { HandleSprint(ctx); };
     }
 
     private void OnEnable()
@@ -173,6 +169,18 @@ public class FirstPersonController : MonoBehaviour
         moveDirection.y = moveDirectionY;
     }
 
+    private void HandleSprint(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            sprint = true;
+        }
+
+        if (context.canceled)
+        {
+            sprint = false;
+        }
+    }
     private void HandleMouseLook()
     {
         float lookAmountX = lookAxis.ReadValue<Vector2>().x;
