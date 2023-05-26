@@ -3031,10 +3031,15 @@ MonoBehaviour:
   - {fileID: 5835228979150071024, guid: 183a9696e2ffd6a4ab3168607c113fe7, type: 3}
   - {fileID: 5073079001585206076, guid: 1a117f344bc9a3b4482ff5eb830138fe, type: 3}
   shapeGameObjectsSpawned: []
-  spawnCount: 1
+  spawnCount: 10
   xRange: 9
   yRange: 3
   zRange: 9
+--- !u!20 &384957877 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7142059300951026760, guid: 43315308af37e97469292160104c65e2, type: 3}
+  m_PrefabInstance: {fileID: 1169017740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &389238767
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,7 +3337,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42106
+  m_Name: pb_Mesh32332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3859,7 +3864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NotificationBehavior: 3
+  m_NotificationBehavior: 2
   m_MaxPlayerCount: 2
   m_AllowJoining: 1
   m_JoinBehavior: 0
@@ -4326,7 +4331,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42030
+  m_Name: pb_Mesh32274
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4490,7 +4495,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42092
+  m_Name: pb_Mesh32318
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4820,17 +4825,25 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7142059300951026762, guid: 43315308af37e97469292160104c65e2, type: 3}
+      propertyPath: m_Name
+      value: Camera Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 384957877}
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Keyboard & Mouse
+      value: PlayStation
       objectReference: {fileID: 0}
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_ActionId
@@ -4871,6 +4884,10 @@ PrefabInstance:
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_ActionEvents.Array.data[9].m_ActionName
       value: GravityGun/Move[/XInputControllerWindows/leftStick]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: GravityGun/Edit[/XInputControllerWindows/rightShoulder,/DualSenseGamepadHID/rightShoulder]
       objectReference: {fileID: 0}
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
@@ -5438,7 +5455,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41816
+  m_Name: pb_Mesh32104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5602,7 +5619,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41784
+  m_Name: pb_Mesh32072
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5766,7 +5783,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42044
+  m_Name: pb_Mesh32288
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5930,7 +5947,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41884
+  m_Name: pb_Mesh32164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6767,7 +6784,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41956
+  m_Name: pb_Mesh32226
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6931,7 +6948,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41904
+  m_Name: pb_Mesh32190
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7095,7 +7112,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41764
+  m_Name: pb_Mesh32052
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7253,17 +7270,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &2031424798 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7142059302017684517, guid: 43315308af37e97469292160104c65e2, type: 3}
-  m_PrefabInstance: {fileID: 7142059301599494459}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045952c42725d9549a4f7603e1a25746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2050117904
 GameObject:
   m_ObjectHideFlags: 0
@@ -8987,88 +8993,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: Xbox
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_NeverAutoSwitchControlSchemes
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
-      value: 38a20833-a26b-4765-8c7c-556f7efcaae0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_ActionId
-      value: 83705762-6d08-491e-8c03-79f94dbd358d
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
-      value: 8c81d802-db75-4573-bc88-16e50b39b0cc
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
-      value: ff9ff44c-2b8b-4d8a-ba64-d395eebaf684
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
-      value: 24443403-5943-4c80-9d24-79ca45fc6b24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
-      value: Player/Zoom[/Keyboard/leftAlt]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_ActionName
-      value: GravityGun/Grab[/XInputControllerWindows/leftTrigger,/Mouse/leftButton]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
-      value: GravityGun/Throw[/XInputControllerWindows/rightTrigger,/Mouse/rightButton]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
-      value: GravityGun/Rotate[/XInputControllerWindows/rightStick]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
-      value: GravityGun/Move[/XInputControllerWindows/leftStick]
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2031424798}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HandleZoom
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FirstPersonController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7142059302017684507, guid: 43315308af37e97469292160104c65e2, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7142059302017684515, guid: 43315308af37e97469292160104c65e2, type: 3}
       propertyPath: m_Name

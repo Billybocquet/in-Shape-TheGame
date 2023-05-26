@@ -12,10 +12,6 @@ public class GravityGun : MonoBehaviour
     [SerializeField] private bool CanMove;
     [SerializeField] private bool CanRotate;
 
-    [Header("Input Action")]
-    [SerializeField] private InputAction grabAction;
-    [SerializeField] private InputAction throwAction;
-    
     [Header("Camera")]
     [SerializeField] private Camera cam;
     
@@ -50,6 +46,7 @@ public class GravityGun : MonoBehaviour
 
     private Rigidbody grabbedRB;
     private Transform grabbedTransform;
+    public bool isEdit;
 
     private float forwardMove;
 
@@ -58,10 +55,6 @@ public class GravityGun : MonoBehaviour
     {
         objectHolder.localPosition = holderOrigin;
         forwardMove = holderOrigin.z;
-        
-        grabAction.performed += ctx => { Grab(ctx); };
-        grabAction.canceled += ctx => { Grab(ctx); };
-        throwAction.performed += ctx => { ThrowGrabbed(ctx); };
     }
 
     // Update is called once per frame
@@ -71,8 +64,8 @@ public class GravityGun : MonoBehaviour
         {
             /*Grab();*/
             
-            if (CanRotate)
-                RotateGrabbed();
+            /*if (CanRotate)
+                RotateGrabbed();*/
             
             if(CanMove)
                 MoveGrabbed();
@@ -83,25 +76,16 @@ public class GravityGun : MonoBehaviour
         }
     }
 
-    private void Grab(InputAction.CallbackContext context)
+    public void Grab(InputAction.CallbackContext context)
     {
         if (grabbedRB)
         {
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position, Time.deltaTime * lerpSpeed));
         }
         
-        if (context.performed)
+        if (CanGravityGun)
         {
-            if (grabbedRB)
-            {
-                grabbedRB.isKinematic = false;
-                
-                objectHolder.localPosition = holderOrigin;
-                
-                grabbedTransform = null;
-                grabbedRB = null;
-            }
-            else
+            if (context.performed)
             {
                 RaycastHit hit;
                 Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
@@ -117,14 +101,30 @@ public class GravityGun : MonoBehaviour
                     }
                 }
             }
+            
+            if (context.canceled && grabbedRB)
+            {
+                grabbedRB.isKinematic = false;
+                
+                objectHolder.localPosition = holderOrigin;
+                
+                grabbedTransform = null;
+                grabbedRB = null;
+            }
         }
     }
     
-    private void RotateGrabbed()
+    public void RotateGrabbed(InputAction.CallbackContext context)
     {
-        if (grabbedRB)
+        float rotateAmountX = context.ReadValue<Vector2>().x;
+        float rotateAmountY = context.ReadValue<Vector2>().y;
+        
+        if (grabbedRB && isEdit)
         {
-            if (Input.GetKey(xRotateButton))
+            grabbedTransform.Rotate(rotateAmountX * xRotation * speedRotation * Time.deltaTime); 
+            grabbedTransform.Rotate(rotateAmountY * yRotation * speedRotation * Time.deltaTime); 
+            
+            /*if (Input.GetKey(xRotateButton))
             {
                 if (Input.GetKey(leftClick))
                     grabbedTransform.Rotate(xRotation * speedRotation * Time.deltaTime); 
@@ -149,7 +149,7 @@ public class GravityGun : MonoBehaviour
                 
                 if (Input.GetKey(rightClick))
                     grabbedTransform.Rotate(-zRotation * speedRotation * Time.deltaTime);
-            }
+            }*/
         }
     }
 
@@ -175,9 +175,9 @@ public class GravityGun : MonoBehaviour
         }
     }
 
-    private void ThrowGrabbed(InputAction.CallbackContext context)
+    public void ThrowGrabbed(InputAction.CallbackContext context)
     {
-        if (grabbedRB)
+        if (grabbedRB && CanThrow)
         {
             if (context.performed)
             {
@@ -189,6 +189,14 @@ public class GravityGun : MonoBehaviour
                 grabbedTransform = null;
                 grabbedRB = null;
             }
+        }
+    }
+
+    public void Editing(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isEdit = !isEdit;
         }
     }
 }

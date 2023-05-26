@@ -19,14 +19,6 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool WillSlideOnSlopes = true;
     [SerializeField] private bool canZoom = true;
 
-    [Header("Input Action")] 
-    [SerializeField] private InputAction moveAxis;
-    [SerializeField] private InputAction lookAxis;
-    [SerializeField] private InputAction jumpAction;
-    [SerializeField] private InputAction sprintAction;
-    [SerializeField] private InputAction crouchAction;
-    [SerializeField] private InputAction zoomAction;
-
     [Header("Movement Parameters")] 
     [SerializeField] private float walkSpeed = 3.0f;
     [SerializeField] private float sprintSpeed = 6.0f;
@@ -104,47 +96,22 @@ public class FirstPersonController : MonoBehaviour
         defaultFOV = playerCamera.fieldOfView;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
-        jumpAction.performed += ctx => { HandleJump(ctx); };
-        crouchAction.performed += ctx => { HandleCrouch(ctx); };
-        zoomAction.performed += ctx => { HandleZoom(ctx); };
-        zoomAction.canceled += ctx => { HandleZoom(ctx); };
-        sprintAction.performed += ctx => { HandleSprint(ctx); };
-        sprintAction.canceled += ctx => { HandleSprint(ctx); };
     }
 
-    private void OnEnable()
-    {
-        moveAxis.Enable();
-        lookAxis.Enable();
-        jumpAction.Enable();
-        zoomAction.Enable();
-        sprintAction.Enable();
-        crouchAction.Enable();
-    }
-    
-    private void OnDisable()
-    {
-        moveAxis.Enable();
-        lookAxis.Enable();
-        jumpAction.Enable();
-        zoomAction.Enable();
-        sprintAction.Enable();
-        crouchAction.Enable();
-    }
+
 
     // Update is called once per frame
     void Update()
     {
         if (CanMove)
         {
-            HandleMovementInput();
+            /*HandleMovementInput();
             HandleMouseLook();
             
-            /*if(canJump)
-                HandleJump();*/
+            if(canJump)
+                HandleJump();
             
-            /*if(canCrouch)
+            if(canCrouch)
                 HandleCrouch();*/
 
             if (canUseHeadBob)
@@ -157,10 +124,10 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void HandleMovementInput()
+    public void HandleMovementInput(InputAction.CallbackContext context)
     {
-        float lookAmountX = moveAxis.ReadValue<Vector2>().x;
-        float lookAmountY = moveAxis.ReadValue<Vector2>().y;
+        float lookAmountX = context.ReadValue<Vector2>().x;
+        float lookAmountY = context.ReadValue<Vector2>().y;
         
         currentInput = new Vector2((isCrouching ? crouchSpeed : IsSprinting ? sprintSpeed :  walkSpeed) * lookAmountY, (isCrouching ? crouchSpeed : IsSprinting ? sprintSpeed : walkSpeed) * lookAmountX);
 
@@ -169,22 +136,25 @@ public class FirstPersonController : MonoBehaviour
         moveDirection.y = moveDirectionY;
     }
 
-    private void HandleSprint(InputAction.CallbackContext context)
+    public void HandleSprint(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (canSprint)
         {
-            sprint = true;
-        }
+            if (context.performed)
+            {
+                sprint = true;
+            }
 
-        if (context.canceled)
-        {
-            sprint = false;
+            if (context.canceled)
+            {
+                sprint = false;
+            }
         }
     }
-    private void HandleMouseLook()
+    public void HandleMouseLook(InputAction.CallbackContext context)
     {
-        float lookAmountX = lookAxis.ReadValue<Vector2>().x;
-        float lookAmountY = lookAxis.ReadValue<Vector2>().y;
+        float lookAmountX = context.ReadValue<Vector2>().x;
+        float lookAmountY = context.ReadValue<Vector2>().y;
         
         rotationX -= lookAmountY * lookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -upperLookLimit, lowerLookLimit);
@@ -192,15 +162,15 @@ public class FirstPersonController : MonoBehaviour
         transform.rotation *= Quaternion.Euler(0, lookAmountX * lookSpeedX, 0);
     }
 
-    private void HandleJump(InputAction.CallbackContext context)
+    public void HandleJump(InputAction.CallbackContext context)
     {
-        if (ShouldJump)
+        if (ShouldJump && context.performed)
             moveDirection.y = jumpForce;
     }
 
-    private void HandleCrouch(InputAction.CallbackContext context)
+    public void HandleCrouch(InputAction.CallbackContext context)
     {
-        if (ShouldCrouch)
+        if (ShouldCrouch && context.performed)
             StartCoroutine(CrouchStand());
     }
 
@@ -218,27 +188,30 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void HandleZoom(InputAction.CallbackContext context)
+    public void HandleZoom(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (canZoom)
         {
-            if (zoomRoutine != null)
+            if (context.performed)
             {
-                StopCoroutine(zoomRoutine);
-                zoomRoutine = null;
+                if (zoomRoutine != null)
+                {
+                    StopCoroutine(zoomRoutine);
+                    zoomRoutine = null;
+                }
+                zoomRoutine = StartCoroutine(ToggleZoom(true));
             }
-            zoomRoutine = StartCoroutine(ToggleZoom(true));
-        }
 
-        if (context.canceled)
-        {
-            if (zoomRoutine != null)
+            if (context.canceled)
             {
-                StopCoroutine(zoomRoutine);
-                zoomRoutine = null;
-            }
+                if (zoomRoutine != null)
+                {
+                    StopCoroutine(zoomRoutine);
+                    zoomRoutine = null;
+                }
             
-            zoomRoutine = StartCoroutine(ToggleZoom(false));
+                zoomRoutine = StartCoroutine(ToggleZoom(false));
+            }
         }
     }
     

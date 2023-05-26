@@ -34,7 +34,7 @@ Transform:
   - {fileID: 7142059302082774943}
   - {fileID: 7248271356138021548}
   m_Father: {fileID: 7142059302017684519}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7142059300951026760
 Camera:
@@ -156,8 +156,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7142059302017684519}
-  - component: {fileID: 7142059302017684512}
-  - component: {fileID: 7142059302017684513}
   - component: {fileID: 7142059302017684514}
   - component: {fileID: 7142059302017684516}
   - component: {fileID: 7142059302017684507}
@@ -182,60 +180,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6931935876894957494}
   - {fileID: 7142059300951026767}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7142059302017684512
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7142059302017684515}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7142059302017684513
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7142059302017684515}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &7142059302017684514
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -294,11 +243,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684517}
+        m_TargetAssemblyTypeName: FirstPersonController, Assembly-CSharp
+        m_MethodName: HandleMovementInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 804ba76e-7119-4d32-8d8e-6a85fbadd87e
     m_ActionName: Player/Movement
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684517}
+        m_TargetAssemblyTypeName: FirstPersonController, Assembly-CSharp
+        m_MethodName: HandleMouseLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: fa9c7532-b977-4e1e-b778-13e32c838500
     m_ActionName: Player/Camera
   - m_PersistentCalls:
@@ -334,13 +307,21 @@ MonoBehaviour:
     m_ActionId: 314fea95-c219-47fb-8ef1-e2c8c19577a4
     m_ActionName: Player/Crouch[/Keyboard/leftCtrl]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684517}
+        m_TargetAssemblyTypeName: FirstPersonController, Assembly-CSharp
+        m_MethodName: HandleSprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: abcc5770-8e57-4bc4-b480-5aac957b3bd6
     m_ActionName: Player/Sprint[/Keyboard/leftShift]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0af547f7-44cc-44b5-a04b-b8fb48d2e62f
-    m_ActionName: Player/GravityGun
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7142059302017684517}
@@ -357,11 +338,79 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 38a20833-a26b-4765-8c7c-556f7efcaae0
     m_ActionName: Player/Zoom[/Keyboard/leftAlt]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684518}
+        m_TargetAssemblyTypeName: GravityGun, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 81bf62c5-75ff-45dc-8190-9bbdba8b53ac
+    m_ActionName: Player/Grab[/XInputControllerWindows/leftTrigger,/DualSenseGamepadHID/leftTrigger,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684518}
+        m_TargetAssemblyTypeName: GravityGun, Assembly-CSharp
+        m_MethodName: ThrowGrabbed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5864a610-e7de-4434-8f7a-9331fa5bc8e5
+    m_ActionName: Player/Throw[/XInputControllerWindows/rightTrigger,/DualSenseGamepadHID/rightTrigger,/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684518}
+        m_TargetAssemblyTypeName: GravityGun, Assembly-CSharp
+        m_MethodName: RotateGrabbed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a8e61a4d-4097-4118-ac10-ca228840d647
+    m_ActionName: Player/Rotate[/XInputControllerWindows/rightStick,/DualSenseGamepadHID/rightStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5cff4e59-b853-420f-9887-03a66238a72c
+    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/DualSenseGamepadHID/leftStick]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7142059302017684518}
+        m_TargetAssemblyTypeName: GravityGun, Assembly-CSharp
+        m_MethodName: Editing
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6c43f06a-2072-48a3-9aac-0a000fe13cb6
+    m_ActionName: Player/Edit[/XInputControllerWindows/rightShoulder,/DualSenseGamepadHID/rightShoulder]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Xbox
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 7142059300951026760}
 --- !u!114 &7142059302017684517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,236 +429,6 @@ MonoBehaviour:
   canUseHeadBob: 1
   WillSlideOnSlopes: 1
   canZoom: 1
-  moveAxis:
-    m_Name: Move Axis
-    m_Type: 0
-    m_ExpectedControlType: Vector2
-    m_Id: 69543d4c-8d09-454c-b9ec-3107487f2049
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector Keyboard
-      m_Id: b74ef1f6-e32c-460d-8dd0-f04b86866997
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 4
-    - m_Name: up
-      m_Id: 05f8938e-fa5e-4489-ad22-02f99bc49f90
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 8e31153b-6086-42fb-a8d9-b5a3065eacf6
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 4407d0a7-d891-4a05-a1b0-9d0b6de106f1
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: right
-      m_Id: 1198abd3-abf5-4c56-92de-aa114f1aa72a
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 8
-    - m_Name: 
-      m_Id: 10e2fa51-7f44-42c3-b81d-0b5ba1f497d8
-      m_Path: <XInputController>/leftStick
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 59cdca0c-0b11-4498-b7ca-55667322bf0f
-      m_Path: <DualShockGamepad>/leftStick
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Axis
-      m_Flags: 0
-    m_Flags: 0
-  lookAxis:
-    m_Name: Look Axis
-    m_Type: 0
-    m_ExpectedControlType: Vector2
-    m_Id: 8741f6ac-96b1-4961-b66f-a4244483f4d1
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: c5e188b7-5381-492a-b69a-3955c2eca001
-      m_Path: <Mouse>/delta
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 439096cd-1553-43a0-8a71-66353a45eee1
-      m_Path: <XInputController>/rightStick
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 10ceb503-afb1-42fa-a26c-aa918d204191
-      m_Path: <DualShockGamepad>/rightStick
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Look Axis
-      m_Flags: 0
-    m_Flags: 0
-  jumpAction:
-    m_Name: Jump
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 4a765799-2007-4643-9de2-39cc0d93272b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 48354824-9b8a-4829-bfe8-539926b4bcf9
-      m_Path: <XInputController>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 7d5da58b-e619-48a6-b37d-1b422d433075
-      m_Path: <DualShockGamepad>/buttonSouth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    - m_Name: 
-      m_Id: e77a5552-c0e3-44ee-a139-5278db7ae267
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Jump
-      m_Flags: 0
-    m_Flags: 0
-  sprintAction:
-    m_Name: Sprint
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: a24dab22-4073-45a7-8cd3-02abd6823a4c
-    m_Processors: 
-    m_Interactions: Hold
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 57f1d56b-73ce-4346-bbdd-ccb88ed1ef2d
-      m_Path: <DualShockGamepad>/leftStickPress
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Sprint
-      m_Flags: 0
-    - m_Name: 
-      m_Id: bb845d4a-631c-45bf-be6b-fa39b363932e
-      m_Path: <XInputController>/leftStick/down
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Sprint
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 4ff47968-8d33-44b1-91fc-d0c7533f02eb
-      m_Path: <Keyboard>/leftShift
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Sprint
-      m_Flags: 0
-    m_Flags: 0
-  crouchAction:
-    m_Name: Crouch
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: b388e454-eeea-41a7-9fdb-070a7ef16439
-    m_Processors: 
-    m_Interactions: Press
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 148ae371-dca2-4167-9020-caed082bd42b
-      m_Path: <DualShockGamepad>/buttonEast
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Crouch
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 6a5e5afb-df68-4a2c-8421-d83fac427d5b
-      m_Path: <XInputController>/buttonEast
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Crouch
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 99a661df-1d57-4058-8c68-17a0afdf04d9
-      m_Path: <Keyboard>/ctrl
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Crouch
-      m_Flags: 0
-    m_Flags: 0
-  zoomAction:
-    m_Name: Zoom
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: f4d7f14b-707f-4d45-bb4e-de0e2adcc8ed
-    m_Processors: 
-    m_Interactions: Hold
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 709eca98-0e84-4e48-bc99-6d6e021741e3
-      m_Path: <XInputController>/buttonNorth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Zoom
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 1e2424a5-661b-4d78-ac6c-04fa7269beb2
-      m_Path: <DualShockGamepad>/buttonNorth
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Zoom
-      m_Flags: 0
-    - m_Name: 
-      m_Id: bbc84246-f214-4959-8a86-645ff4f942db
-      m_Path: <Keyboard>/leftAlt
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Zoom
-      m_Flags: 0
-    m_Flags: 0
   walkSpeed: 3
   sprintSpeed: 6
   crouchSpeed: 1.5
@@ -648,72 +467,6 @@ MonoBehaviour:
   CanThrow: 1
   CanMove: 1
   CanRotate: 1
-  grabAction:
-    m_Name: Grab
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: debdeb0a-b170-4163-a0d3-0d60de208253
-    m_Processors: 
-    m_Interactions: Hold
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: e86df4c2-e9b7-4117-8d3f-2caf48188aa0
-      m_Path: <XInputController>/leftTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Grab
-      m_Flags: 0
-    - m_Name: 
-      m_Id: c1b8490e-02ae-4304-83cb-043da081865e
-      m_Path: <DualShockGamepad>/leftTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Grab
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 05f0c2bb-f802-46ec-a7aa-8989d0386816
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Grab
-      m_Flags: 0
-    m_Flags: 0
-  throwAction:
-    m_Name: Throw
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 6fa433c7-dd38-45e1-a600-48b70f9633eb
-    m_Processors: 
-    m_Interactions: Press
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: bf9b0b84-a521-49fa-a2f1-d72e30660b30
-      m_Path: <XInputController>/rightTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Throw
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 38ef4596-b1f9-48e3-a80b-e57be99c9cb5
-      m_Path: <DualShockGamepad>/rightTrigger
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Throw
-      m_Flags: 0
-    - m_Name: 
-      m_Id: 211ef4ea-d077-4974-b729-c1eb69180935
-      m_Path: <Mouse>/rightButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Throw
-      m_Flags: 0
-    m_Flags: 0
   cam: {fileID: 7142059300951026760}
   maxGrabDistance: 10
   throwForce: 20
@@ -735,6 +488,7 @@ MonoBehaviour:
   forwardButton: 114
   objectHolder: {fileID: 7142059302082774943}
   holderOrigin: {x: 0, y: 0, z: 4}
+  isEdit: 0
 --- !u!1 &7142059302082774936
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,3 +632,97 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1001 &7474171694930819165
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7142059302017684519}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5285499962029164057, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 083b18b30f92bb84580f7ae4b0a94765, type: 2}
+    - target: {fileID: 919132149155446097, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_Name
+      value: PersoJeu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 083b18b30f92bb84580f7ae4b0a94765, type: 2}
+    - target: {fileID: 6829333093618665122, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 083b18b30f92bb84580f7ae4b0a94765, type: 2}
+    - target: {fileID: 8100320773420232829, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 083b18b30f92bb84580f7ae4b0a94765, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+--- !u!4 &6931935876894957494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4420c46e953af2942b88e7ef4a3cd5fc, type: 3}
+  m_PrefabInstance: {fileID: 7474171694930819165}
+  m_PrefabAsset: {fileID: 0}

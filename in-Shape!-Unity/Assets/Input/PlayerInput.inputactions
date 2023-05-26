@@ -38,7 +38,7 @@
                     "id": "314fea95-c219-47fb-8ef1-e2c8c19577a4",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -57,6 +57,51 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "81bf62c5-75ff-45dc-8190-9bbdba8b53ac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "5864a610-e7de-4434-8f7a-9331fa5bc8e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "a8e61a4d-4097-4118-ac10-ca228840d647",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "5cff4e59-b853-420f-9887-03a66238a72c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Edit",
+                    "type": "Button",
+                    "id": "6c43f06a-2072-48a3-9aac-0a000fe13cb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -302,54 +347,10 @@
                     "action": "Camera",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "GravityGun",
-            "id": "5f36eed9-b7f7-4c7a-8f55-0af5c8797480",
-            "actions": [
-                {
-                    "name": "Grab",
-                    "type": "Button",
-                    "id": "83705762-6d08-491e-8c03-79f94dbd358d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Hold",
-                    "initialStateCheck": false
                 },
-                {
-                    "name": "Throw",
-                    "type": "Button",
-                    "id": "8c81d802-db75-4573-bc88-16e50b39b0cc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Rotate",
-                    "type": "Value",
-                    "id": "ff9ff44c-2b8b-4d8a-ba64-d395eebaf684",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "24443403-5943-4c80-9d24-79ca45fc6b24",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                }
-            ],
-            "bindings": [
                 {
                     "name": "",
-                    "id": "a040c68d-230c-46c2-90da-c214d37e3c65",
+                    "id": "cf271f4f-2250-41a8-9981-a6fcc99b2d21",
                     "path": "<XInputController>/leftTrigger",
                     "interactions": "",
                     "processors": "",
@@ -360,7 +361,7 @@
                 },
                 {
                     "name": "",
-                    "id": "8ac86a96-bc8c-40df-a666-2b044688ccb8",
+                    "id": "92f01998-1d4e-4b55-81a2-8fbd44a38a3a",
                     "path": "<DualShockGamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
@@ -371,7 +372,7 @@
                 },
                 {
                     "name": "",
-                    "id": "4190ca57-cf8d-4dcb-8afa-e015278d2d0a",
+                    "id": "24a871e6-74bf-4d04-b7b7-f27a1e7f3cd9",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -382,7 +383,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e3d0c5ef-6fc9-49b8-ab6f-bd49dda8a87a",
+                    "id": "de37dbad-1eba-4a22-83ee-621bb807ea89",
                     "path": "<XInputController>/rightTrigger",
                     "interactions": "",
                     "processors": "",
@@ -393,7 +394,7 @@
                 },
                 {
                     "name": "",
-                    "id": "3d9654f4-5f2b-49bd-af5f-edaf24ba7cda",
+                    "id": "cfd41b16-0c65-426c-9941-b29ec35368e5",
                     "path": "<DualShockGamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
@@ -404,7 +405,7 @@
                 },
                 {
                     "name": "",
-                    "id": "c5b2f559-0ed8-405e-b567-b26eb55484c8",
+                    "id": "2a380226-1417-438a-a05e-a83ac4a27045",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
@@ -415,7 +416,7 @@
                 },
                 {
                     "name": "",
-                    "id": "8e468fad-89df-4672-9088-25eb428b7272",
+                    "id": "093d217d-a472-4b67-b1df-395a636419f3",
                     "path": "<XInputController>/rightStick",
                     "interactions": "",
                     "processors": "",
@@ -426,7 +427,7 @@
                 },
                 {
                     "name": "",
-                    "id": "dbeeb134-b958-4b78-bc9d-91468331c588",
+                    "id": "0ea33e7b-3ecd-450b-8f52-083b6abe15e5",
                     "path": "<DualShockGamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
@@ -437,7 +438,7 @@
                 },
                 {
                     "name": "",
-                    "id": "e91b8af7-2d54-43aa-a4e9-cd4b62cebb22",
+                    "id": "eb7092ef-509d-449b-ae4f-ec256a6ca6cf",
                     "path": "<XInputController>/leftStick",
                     "interactions": "",
                     "processors": "",
@@ -448,12 +449,34 @@
                 },
                 {
                     "name": "",
-                    "id": "97fa1164-2974-4c04-b659-40d68c151a13",
+                    "id": "c056a6aa-316a-4f9b-b4ab-06c9c74261bf",
                     "path": "<DualShockGamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "PlayStation",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b00e86d8-b392-4fa8-b3f9-8b92de1f4910",
+                    "path": "<XInputController>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "Edit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27c8fb06-21de-448b-a3f5-9301c5135e28",
+                    "path": "<DualShockGamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation",
+                    "action": "Edit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
