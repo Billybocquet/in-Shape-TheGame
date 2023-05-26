@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9f99239-713d-4be2-bb9b-53c653e385fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.in-Shape!-Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.in-Shape!-Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GravityGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GravityGun.cs" afterDir="false" />
-    </list>
+    <list default="true" id="a9f99239-713d-4be2-bb9b-53c653e385fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,8 +36,8 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\gabin\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\gabin\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\gabin\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\gabin\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
       &quot;C:\\Users\\gabin\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
@@ -114,6 +109,8 @@
       <workItem from="1684921234381" duration="3041000" />
       <workItem from="1685004957146" duration="1184000" />
       <workItem from="1685020496756" duration="4112000" />
+      <workItem from="1685042762974" duration="612000" />
+      <workItem from="1685053136676" duration="1455000" />
     </task>
     <servers />
   </component>
