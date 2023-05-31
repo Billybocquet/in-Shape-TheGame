@@ -1,8 +1,0 @@
-Essayer de faire un version ou les joueur doivent atteindre une certaine hauteur en empilant des formes
-
-LD : trois zone ronde, la zone centrale ou les bloc commun spawn et deux poles pour chaque joueur.
-
-Les joueur ne peuvent pas entré dans la zone de l'autre il ne peut que lancé des element.
-Un bouton de spawn pour faire apparaitre les formes
-Pouvoir atteindre un objet pour gagner
-Les element se détruise en dehors de la zone
