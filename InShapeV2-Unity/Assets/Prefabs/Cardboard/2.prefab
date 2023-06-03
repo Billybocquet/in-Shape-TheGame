@@ -126,7 +126,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6601851323414272888}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8eef71d5675eb864c9ee96dd79795f74, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -161,9 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Grab Cardboard
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 65536
 --- !u!1 &6688820237011506253
 GameObject:
   m_ObjectHideFlags: 0

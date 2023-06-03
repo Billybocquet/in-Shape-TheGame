@@ -63,6 +63,10 @@ public class FirstPersonController2 : MonoBehaviour
     [SerializeField] private float zoomFOV = 30f;
     private float defaultFOV;
     private Coroutine zoomRoutine;
+
+    [Header("Arnimator")]
+    [SerializeField] private Animator robotAnimator;
+    private Vector3 lastPosition;
     
     private Vector3 hitPointNormal;
     private bool IsSprinting;
@@ -143,6 +147,25 @@ public class FirstPersonController2 : MonoBehaviour
         //Debug.Log("x : " + inputVectorX + "y : "+ inputVectorY);
         
         currentInput = new Vector2((isCrouching ? crouchSpeed : IsSprinting ? sprintSpeed :  walkSpeed) * inputVectorX, (isCrouching ? crouchSpeed : IsSprinting ? sprintSpeed : walkSpeed) * inputVectorY);
+
+        lastPosition = gameObject.transform.position;
+        
+        if (characterController.isGrounded && !IsSprinting && currentInput != Vector2.zero)
+        {
+            robotAnimator.SetTrigger("Walk");
+        }
+        else if (characterController.isGrounded && IsSprinting && currentInput != Vector2.zero)
+        {
+            robotAnimator.SetTrigger("Run");
+        }
+        else if (characterController.isGrounded && currentInput == Vector2.zero)
+        {
+            robotAnimator.SetTrigger("Idle");
+        }
+        else if (!characterController.isGrounded)
+        {
+            robotAnimator.SetTrigger("Jump");
+        }
 
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);

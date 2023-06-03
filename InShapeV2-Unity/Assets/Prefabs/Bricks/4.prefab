@@ -194,8 +194,8 @@ Transform:
   m_GameObject: {fileID: 6921563164486229707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6860146856772247316}
   - {fileID: 6081194846225447479}
@@ -211,7 +211,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6921563164486229707}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1f90d33359503ef43a594927a1b67dff, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -246,9 +246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Grab Bricks
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 65536
 --- !u!1 &7440895855070958078
 GameObject:
   m_ObjectHideFlags: 0

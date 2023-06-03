@@ -48,7 +48,7 @@ public class GravityGun2 : MonoBehaviour
     private Transform grabbedTransform;
 
     private float forwardMove;
-    public bool IsEditing;
+    [HideInInspector] public bool IsEditing;
     
     void Awake()
     {
@@ -74,6 +74,8 @@ public class GravityGun2 : MonoBehaviour
         if (grabbedRB)
         {
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position, Time.deltaTime * lerpSpeed));
+            
+            gravityGunAnimator.SetTrigger("Use");
         }
         
         if (CanGravityGun)
@@ -102,8 +104,6 @@ public class GravityGun2 : MonoBehaviour
         if (context.performed)
         {
             //Debug.Log("Grab! " + context.phase);
-            
-            gravityGunAnimator.SetTrigger("Use");
 
             RaycastHit hit;
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
@@ -184,6 +184,8 @@ public class GravityGun2 : MonoBehaviour
                 grabbedRB.AddForce(cam.transform.forward * throwForce, ForceMode.VelocityChange);
                 
                 objectHolder.localPosition = holderOrigin;
+                
+                IsEditing = false;
                 
                 grabbedTransform = null;
                 grabbedRB = null;

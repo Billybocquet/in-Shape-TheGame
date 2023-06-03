@@ -377,7 +377,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9097728555881752025}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 99026effe37584f49a95dbe5e91d830e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -412,6 +412,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Grab Wood
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 65536
