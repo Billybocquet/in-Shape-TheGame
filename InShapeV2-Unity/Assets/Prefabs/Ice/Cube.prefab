@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1099985239869426133}
   - component: {fileID: 7516758800606258748}
   - component: {fileID: 3964160706660527649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 8736190378603270209}
   - component: {fileID: 7842637323437126252}
   - component: {fileID: 3039589639045458941}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8245443970768663906}
   - component: {fileID: 833414465122731004}
   - component: {fileID: 9121741847667695395}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 6074343312624441581}
   - component: {fileID: 6287425306934785677}
   - component: {fileID: 1469679711383946040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5573140374077060285}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 40
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b388963000b10c14d8cf8b1b88063868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactText: 
+  interactText: Grab Ice
 --- !u!1 &6720734934319015325
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 3388287157353558540}
   - component: {fileID: 3756518292966698695}
   - component: {fileID: 3838096781152723090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}

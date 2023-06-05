@@ -53,7 +53,7 @@ public class GravityGun2 : MonoBehaviour
     void Awake()
     {
         IsEditing = false;
-        
+
         objectHolder.localPosition = holderOrigin;
         forwardMove = holderOrigin.z;
         playerInput = GetComponent<PlayerInput>();
@@ -73,9 +73,8 @@ public class GravityGun2 : MonoBehaviour
         
         if (grabbedRB)
         {
-            grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position, Time.deltaTime * lerpSpeed));
-            
-            gravityGunAnimator.SetTrigger("Use");
+            grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position,
+                Time.deltaTime * lerpSpeed));
         }
         
         if (CanGravityGun)
@@ -95,6 +94,8 @@ public class GravityGun2 : MonoBehaviour
                 MoveGrabbed(AxisFB);
             }
         }
+        
+        AnimationGun();
     }
 
     private void Grab(InputAction.CallbackContext context)
@@ -123,13 +124,12 @@ public class GravityGun2 : MonoBehaviour
         if (grabbedRB && context.canceled)
         {
             //Debug.Log("Drop! " + context.phase);
-            
-            gravityGunAnimator.SetTrigger("No");
-                
+
             grabbedRB.isKinematic = false;
             IsEditing = false;
                 
-            objectHolder.localPosition = holderOrigin;
+            forwardMove = holderOrigin.z;
+            objectHolder.localPosition = new Vector3(0, 0, forwardMove);
                 
             grabbedTransform = null;
             grabbedRB = null;
@@ -182,14 +182,27 @@ public class GravityGun2 : MonoBehaviour
                 
                 grabbedRB.isKinematic = false;
                 grabbedRB.AddForce(cam.transform.forward * throwForce, ForceMode.VelocityChange);
-                
-                objectHolder.localPosition = holderOrigin;
+
+                forwardMove = holderOrigin.z;
+                objectHolder.localPosition = new Vector3(0, 0, forwardMove);
                 
                 IsEditing = false;
                 
                 grabbedTransform = null;
                 grabbedRB = null;
             }
+        }
+    }
+
+    private void AnimationGun()
+    {
+        if (grabbedRB)
+        {
+            gravityGunAnimator.SetTrigger("Use");
+        }
+        else if (!grabbedRB)
+        {
+            gravityGunAnimator.SetTrigger("No");
         }
     }
 }

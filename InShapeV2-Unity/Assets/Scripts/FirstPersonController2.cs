@@ -139,6 +139,8 @@ public class FirstPersonController2 : MonoBehaviour
                 HandleHeadBob();
 
             ApplyFinalMovement();
+            
+            AnimationPlayer();
         }
     }
 
@@ -149,23 +151,6 @@ public class FirstPersonController2 : MonoBehaviour
         currentInput = new Vector2((isCrouching ? crouchSpeed : IsSprinting ? sprintSpeed :  walkSpeed) * inputVectorX, (isCrouching ? crouchSpeed : IsSprinting ? sprintSpeed : walkSpeed) * inputVectorY);
 
         lastPosition = gameObject.transform.position;
-        
-        if (characterController.isGrounded && !IsSprinting && currentInput != Vector2.zero)
-        {
-            robotAnimator.SetTrigger("Walk");
-        }
-        else if (characterController.isGrounded && IsSprinting && currentInput != Vector2.zero)
-        {
-            robotAnimator.SetTrigger("Run");
-        }
-        else if (characterController.isGrounded && currentInput == Vector2.zero)
-        {
-            robotAnimator.SetTrigger("Idle");
-        }
-        else if (!characterController.isGrounded)
-        {
-            robotAnimator.SetTrigger("Jump");
-        }
 
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.TransformDirection(Vector3.forward) * currentInput.x) + (transform.TransformDirection(Vector3.right) * currentInput.y);
@@ -313,5 +298,32 @@ public class FirstPersonController2 : MonoBehaviour
 
         playerCamera.fieldOfView = targetFOV;
         zoomRoutine = null;
+    }
+
+    private void AnimationPlayer()
+    {
+        if (characterController.isGrounded)
+        {
+            if (currentInput != Vector2.zero)
+            {
+                if (!IsSprinting)
+                {
+                    robotAnimator.SetTrigger("Walk");
+                }
+                else if (IsSprinting)
+                {
+                    robotAnimator.SetTrigger("Run");
+                }
+            }
+            else if (currentInput == Vector2.zero)
+            {
+                robotAnimator.SetTrigger("Idle");
+            }
+            
+        }
+        else
+        {
+            robotAnimator.SetTrigger("Jump");
+        }
     }
 }
