@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1469679711383946040}
   m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Shape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Grab Ice
+  onTower: 0
 --- !u!1 &6720734934319015325
 GameObject:
   m_ObjectHideFlags: 0

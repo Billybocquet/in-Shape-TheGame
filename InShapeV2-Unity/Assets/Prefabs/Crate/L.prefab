@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 6959838256129298129}
   m_Layer: 9
   m_Name: L
-  m_TagString: Untagged
+  m_TagString: Shape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Grab Wood
+  onTower: 0
 --- !u!1 &5970200505450093899
 GameObject:
   m_ObjectHideFlags: 0

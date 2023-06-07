@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 8078201816579471382}
   m_Layer: 9
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Shape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,3 +244,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Grab Ice
+  onTower: 0

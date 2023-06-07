@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 6530308002908504751}
   m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Shape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactText: Dices
+  onTower: 0
 --- !u!114 &6530308002908504751
 MonoBehaviour:
   m_ObjectHideFlags: 0
