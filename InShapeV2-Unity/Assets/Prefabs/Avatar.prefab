@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 986589663707737257}
   - component: {fileID: 1819981410025011900}
   - component: {fileID: 8113040844474357088}
+  - component: {fileID: 5028267795090727112}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Untagged
@@ -535,6 +536,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 0}
   limit: {x: 0, y: -5, z: 0}
+--- !u!114 &5028267795090727112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986589663707737251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a467a880a13bb3408fcc3fe778411b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  maxHighlightDistance: 3
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  width: 10
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6028035168177944267
 GameObject:
   m_ObjectHideFlags: 0

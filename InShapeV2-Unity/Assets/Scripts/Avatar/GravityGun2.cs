@@ -44,7 +44,7 @@ public class GravityGun2 : MonoBehaviour
     [SerializeField] private Vector3 holderOrigin;
 
 
-    private Rigidbody grabbedRB;
+    [HideInInspector] public Rigidbody grabbedRB;
     private Transform grabbedTransform;
 
     private float forwardMove;
