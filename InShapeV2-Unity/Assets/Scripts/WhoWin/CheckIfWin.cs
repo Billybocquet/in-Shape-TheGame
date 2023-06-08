@@ -7,6 +7,10 @@ public class CheckIfWin : MonoBehaviour
 {
     [Header("Checking Time")] 
     [SerializeField, Range(0, 10)] private float checkingTime; 
+
+    [Header("Score")] 
+    [SerializeField] private string scoreText;
+    [SerializeField] private Score score;
     
     private Shape shape;
     private float t;
@@ -14,6 +18,7 @@ public class CheckIfWin : MonoBehaviour
     private void Start()
     {
         t = 0;
+        score = GameObject.Find("GameManager").GetComponent<Score>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -26,7 +31,9 @@ public class CheckIfWin : MonoBehaviour
             
             if (shape.onTower && t >= checkingTime)
             {
-                Debug.Log("Tower reach " + gameObject.name);
+                //Debug.Log("Tower reach " + gameObject.name);
+                
+                score.WinnerIs(scoreText);
             }
         }
     }

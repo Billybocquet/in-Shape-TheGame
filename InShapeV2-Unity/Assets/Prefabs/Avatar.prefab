@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 986589663707737256}
   - component: {fileID: 986589663707737257}
   - component: {fileID: 1819981410025011900}
+  - component: {fileID: 8113040844474357088}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Untagged
@@ -520,6 +521,20 @@ MonoBehaviour:
   playerInteract: {fileID: 986589663707737257}
   gravityGun2: {fileID: 986589663707737256}
   interactTextMeshProUGUI: {fileID: 0}
+--- !u!114 &8113040844474357088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986589663707737251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bbdc5702d0d0e449575e6c0a4968b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPosition: {fileID: 0}
+  limit: {x: 0, y: -5, z: 0}
 --- !u!1 &6028035168177944267
 GameObject:
   m_ObjectHideFlags: 0

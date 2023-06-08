@@ -30,17 +30,17 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameIsPaused)
             {
-                Resume();
+                Resume(pauseMenuUI);
             }
             else
             {
-                Pause();
+                Pause(pauseMenuUI);
             }
         }
     }
-    public void Resume()
+    public void Resume(GameObject uiGameObject)
     {
-        pauseMenuUI.SetActive(false);
+        uiGameObject.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         
@@ -48,9 +48,9 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
     }
         
-    public void Pause()
+    public void Pause(GameObject uiGameObject)
     {
-        pauseMenuUI.SetActive(true);
+        uiGameObject.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
         
