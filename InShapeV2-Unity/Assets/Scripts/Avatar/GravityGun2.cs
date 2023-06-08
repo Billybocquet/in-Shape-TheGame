@@ -43,9 +43,12 @@ public class GravityGun2 : MonoBehaviour
     [SerializeField] private Transform objectHolder;
     [SerializeField] private Vector3 holderOrigin;
 
+    [Header("Script")] 
+    [SerializeField] private Laser2 laser2;
 
     private Rigidbody grabbedRB;
     private Transform grabbedTransform;
+    private bool lineActivate;
 
     private float forwardMove;
     [HideInInspector] public bool IsEditing;
@@ -57,6 +60,7 @@ public class GravityGun2 : MonoBehaviour
         objectHolder.localPosition = holderOrigin;
         forwardMove = holderOrigin.z;
         playerInput = GetComponent<PlayerInput>();
+        laser2 = GetComponent<Laser2>();
         
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
@@ -75,6 +79,14 @@ public class GravityGun2 : MonoBehaviour
         {
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position,
                 Time.deltaTime * lerpSpeed));
+
+            lineActivate = true;
+            laser2.RenderLaser(lineActivate, grabbedRB);
+        }
+        else
+        {
+            lineActivate = false;
+            laser2.RenderLaser(lineActivate, grabbedRB);
         }
         
         if (CanGravityGun)

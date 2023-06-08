@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 986589663707737257}
   - component: {fileID: 1819981410025011900}
   - component: {fileID: 8113040844474357088}
+  - component: {fileID: 6083245205365257412}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Untagged
@@ -485,6 +486,7 @@ MonoBehaviour:
     m_Bits: 128
   objectHolder: {fileID: 986589662048076365}
   holderOrigin: {x: 0, y: 0, z: 3}
+  laser2: {fileID: 0}
   IsEditing: 0
 --- !u!114 &986589663707737257
 MonoBehaviour:
@@ -535,6 +537,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPosition: {fileID: 0}
   limit: {x: 0, y: -5, z: 0}
+--- !u!114 &6083245205365257412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986589663707737251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9fe85165ff93945aafa5528d314ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPoint: {fileID: 8825413950780699091}
+  finalPoint: {fileID: 986589662048076365}
+  lineRend: {fileID: 0}
 --- !u!1 &6028035168177944267
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +755,11 @@ Animator:
 --- !u!4 &737371457894318302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7402ba2fe01a37540a3c465dee8ac145, type: 3}
+  m_PrefabInstance: {fileID: 986589663398520629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8825413950780699091 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8632055958874330854, guid: 7402ba2fe01a37540a3c465dee8ac145, type: 3}
   m_PrefabInstance: {fileID: 986589663398520629}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2223758317178260754
