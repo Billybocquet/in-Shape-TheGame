@@ -7,6 +7,12 @@ public class RandomPositionSpawner : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] private GameObject gameObjectPrefab;
     private RandomPositionBoundingVolume rdPosBoundingVolume;
+
+    [Header("Text")] 
+    [SerializeField] private string text;
+
+    [Header("Script")]
+    private CheckIfWin checkIfWin;
     
     // Start is called before the first frame update
     void Start()
@@ -14,12 +20,8 @@ public class RandomPositionSpawner : MonoBehaviour
         rdPosBoundingVolume = GetComponent<RandomPositionBoundingVolume>();
         
         Vector3 rdPos = rdPosBoundingVolume.GetRandomPosition();
-        Instantiate(gameObjectPrefab, rdPos, Quaternion.identity);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject checker = Instantiate(gameObjectPrefab, rdPos, Quaternion.identity);
+        checkIfWin = checker.GetComponent<CheckIfWin>();
+        checkIfWin.scoreText = text;
     }
 }

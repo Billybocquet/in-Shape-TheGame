@@ -8,9 +8,10 @@ public class CheckIfWin : MonoBehaviour
     [Header("Checking Time")] 
     [SerializeField, Range(0, 10)] private float checkingTime; 
 
-    [Header("Score")] 
-    [SerializeField] private string scoreText;
+    [Header("Score")]
     [SerializeField] private Score score;
+    
+    [HideInInspector] public string scoreText;
     
     private Shape shape;
     private float t;

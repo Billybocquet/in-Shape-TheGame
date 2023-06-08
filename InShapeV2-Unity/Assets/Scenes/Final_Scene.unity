@@ -17862,6 +17862,10 @@ PrefabInstance:
       value: Sol
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70b3eb6de678a3a4eba35e1fe88e5d17, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 70b3eb6de678a3a4eba35e1fe88e5d17, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -21070,6 +21074,10 @@ PrefabInstance:
     - target: {fileID: 4237005748759374604, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
       propertyPath: m_Name
       value: Check Spawner J2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237005748759374606, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
+      propertyPath: text
+      value: Player 2 Win
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
@@ -24888,7 +24896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4237005748759374600, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4237005748759374600, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24925,6 +24933,10 @@ PrefabInstance:
     - target: {fileID: 4237005748759374604, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
       propertyPath: m_Name
       value: Check Spawner J1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237005748759374606, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
+      propertyPath: text
+      value: Player 1 Win
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb9ee825ac21f143a61f1cb578627d5, type: 3}
