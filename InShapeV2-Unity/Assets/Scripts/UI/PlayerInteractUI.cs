@@ -12,7 +12,7 @@ public class PlayerInteractUI : MonoBehaviour
     
     [Header("Script")]
     [SerializeField] private PlayerInteract playerInteract;
-    [SerializeField] private GravityGun2 gravityGun2;
+    [SerializeField] private GravityGun3 gravityGun3;
     
     [Header("TextMeshPro")]
     [SerializeField] private TextMeshProUGUI interactTextMeshProUGUI;
@@ -28,7 +28,7 @@ public class PlayerInteractUI : MonoBehaviour
             Hide(containerGameObject);
         }
 
-        if (gravityGun2.IsEditing == true)
+        if (gravityGun3.IsEditing == true)
         {
             Show(containerGameObject2);
         }

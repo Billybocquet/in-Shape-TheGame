@@ -7,7 +7,6 @@ public class PlayerInteract : MonoBehaviour
 {
     [Header("Controls")]
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerInputActions playerInputActions;
 
     [Header("Layer Mask")] 
     [SerializeField] private LayerMask layerMask;
@@ -19,15 +18,10 @@ public class PlayerInteract : MonoBehaviour
     void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        
-        playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.Enable();
-        
-        playerInputActions.Player.Interact.performed += Interaction;
     }
 
 
-    private void Interaction(InputAction.CallbackContext context)
+    public void Interaction(InputAction.CallbackContext context)
     {
         if (context.performed)
         {

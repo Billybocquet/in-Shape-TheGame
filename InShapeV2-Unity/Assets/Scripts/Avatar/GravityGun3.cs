@@ -14,8 +14,7 @@ public class GravityGun3 : MonoBehaviour
     
     [Header("Controls")]
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerInputActions playerInputActions;
-    
+
     [Header("Camera")]
     [SerializeField] private Camera cam;
 
@@ -56,6 +55,7 @@ public class GravityGun3 : MonoBehaviour
     private float rotateAxisX;
     private float rotateAxisY;
     private float rotateAxisZ;
+    private float AxisFB;
     
     void Awake()
     {
@@ -65,14 +65,6 @@ public class GravityGun3 : MonoBehaviour
         forwardMove = holderOrigin.z;
         playerInput = GetComponent<PlayerInput>();
         laser2 = GetComponent<Laser2>();
-        
-        /*playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.Enable();
-        
-        playerInputActions.Player.Grab.performed += Grab;
-        playerInputActions.Player.Grab.canceled += Grab;
-        playerInputActions.Player.Throw.performed += ThrowGrabbed;
-        playerInputActions.Player.EditMode.performed += Editing;*/
     }
     
     void FixedUpdate()
@@ -95,7 +87,7 @@ public class GravityGun3 : MonoBehaviour
         
         if (CanGravityGun)
         {
-            if (CanRotate)
+            if (CanRotate && IsEditing)
             {
                 RotateGrabbed(rotateAxisX, rotateAxisY, rotateAxisZ);
             }
@@ -103,7 +95,6 @@ public class GravityGun3 : MonoBehaviour
 
             if (CanMove)
             {
-                float AxisFB = playerInputActions.Player.ForwardBack.ReadValue<float>();
                 MoveGrabbed(AxisFB);
             }
         }
@@ -111,18 +102,23 @@ public class GravityGun3 : MonoBehaviour
         AnimationGun();
     }
 
-    private void RotateInput1(InputAction.CallbackContext context)
+    public void RotateInput1(InputAction.CallbackContext context)
     {
-        rotateAxisX = playerInputActions.Player.Rotate.ReadValue<Vector2>().x;
-        rotateAxisY = playerInputActions.Player.Rotate.ReadValue<Vector2>().y;
+        rotateAxisX = context.ReadValue<Vector2>().x;
+        rotateAxisY = context.ReadValue<Vector2>().y;
     }
 
-    private void RotateInput2(InputAction.CallbackContext context)
+    public void RotateInput2(InputAction.CallbackContext context)
     {
-        rotateAxisZ = playerInputActions.Player.Rotate2.ReadValue<Vector2>().x;
+        rotateAxisZ = context.ReadValue<Vector2>().x;
     }
 
-    private void Grab(InputAction.CallbackContext context)
+    public void AxisInput(InputAction.CallbackContext context)
+    {
+        AxisFB = context.ReadValue<float>();
+    }
+
+    public void Grab(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -162,7 +158,7 @@ public class GravityGun3 : MonoBehaviour
     {
         //Debug.Log("x : " + axisX + "y : " + axisY + "z : " + axisZ);
         
-        if (grabbedRB && IsEditing)
+        if (grabbedRB)
         {
             grabbedTransform.Rotate(axisX * xRotation * speedRotation * Time.deltaTime); 
             
@@ -172,7 +168,7 @@ public class GravityGun3 : MonoBehaviour
         }
     }
 
-    private void Editing(InputAction.CallbackContext context)
+    public void Editing(InputAction.CallbackContext context)
     {
         if (grabbedRB && context.performed)
         {
@@ -194,7 +190,7 @@ public class GravityGun3 : MonoBehaviour
         }
     }
 
-    private void ThrowGrabbed(InputAction.CallbackContext context)
+    public void ThrowGrabbed(InputAction.CallbackContext context)
     {
         if (CanThrow && grabbedRB)
         {

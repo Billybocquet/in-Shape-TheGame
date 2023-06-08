@@ -9,7 +9,6 @@ public class PauseMenu : MonoBehaviour
 {
     [Header("Controls")] 
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerInputActions playerInputActions;
 
     [Header("UI Object")] 
     [SerializeField] private GameObject pauseMenuUI;
@@ -19,9 +18,6 @@ public class PauseMenu : MonoBehaviour
     public void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.Enable();
-        playerInputActions.Player.Pause.performed += SetPause;
 
         GameIsPaused = false;
         Time.timeScale = 1f;

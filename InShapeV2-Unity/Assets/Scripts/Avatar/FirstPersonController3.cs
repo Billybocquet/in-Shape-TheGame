@@ -21,7 +21,6 @@ public class FirstPersonController3 : MonoBehaviour
 
     [Header("Controls")] 
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private PlayerInputActions playerInputActions;
 
     [Header("Movement Parameters")] 
     [SerializeField] private float walkSpeed = 3.0f;
@@ -114,15 +113,6 @@ public class FirstPersonController3 : MonoBehaviour
         
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-        /*playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.Enable();
-        playerInputActions.Player.Jump.performed += HandleJump;
-        playerInputActions.Player.Crouch.performed += HandleCrouch;
-        playerInputActions.Player.Zoom.performed += HandleZoom;
-        playerInputActions.Player.Zoom.canceled += HandleZoom;
-        playerInputActions.Player.Sprint.performed += HandleSprint;
-        playerInputActions.Player.Sprint.canceled += HandleSprint;*/
     }
     
     void FixedUpdate()
@@ -144,13 +134,13 @@ public class FirstPersonController3 : MonoBehaviour
         }
     }
 
-    private void MovementInput(InputAction.CallbackContext context)
+    public void MovementInput(InputAction.CallbackContext context)
     {
         inputMoveX = context.ReadValue<Vector2>().y;
         inputMoveY = context.ReadValue<Vector2>().x;
     }
 
-    private void LookInput(InputAction.CallbackContext context)
+    public void LookInput(InputAction.CallbackContext context)
     {
         inputLookX = context.ReadValue<Vector2>().x;
         inputLookY = context.ReadValue<Vector2>().y;
@@ -169,7 +159,7 @@ public class FirstPersonController3 : MonoBehaviour
         moveDirection.y = moveDirectionY;
     }
 
-    private void HandleSprint(InputAction.CallbackContext context)
+    public void HandleSprint(InputAction.CallbackContext context)
     {
         if (canSprint && ShouldSprint)
         {
@@ -181,7 +171,7 @@ public class FirstPersonController3 : MonoBehaviour
         }
     }
 
-    private void HandleMouseLook(float inputVectorX, float inputVectorY)
+    public void HandleMouseLook(float inputVectorX, float inputVectorY)
     {
         //Debug.Log("x : " + inputVectorX + "y : "+ inputVectorY);
         
@@ -191,7 +181,7 @@ public class FirstPersonController3 : MonoBehaviour
         transform.rotation *= Quaternion.Euler(0, inputVectorX * lookSpeedX, 0);
     }
 
-    private void HandleJump(InputAction.CallbackContext context)
+    public void HandleJump(InputAction.CallbackContext context)
     {
         if (canJump && ShouldJump)
             if (context.performed)
@@ -201,7 +191,7 @@ public class FirstPersonController3 : MonoBehaviour
             }
     }
 
-    private void HandleCrouch(InputAction.CallbackContext context)
+    public void HandleCrouch(InputAction.CallbackContext context)
     {
         if (canCrouch && ShouldCrouch)
             if (context.performed)
@@ -225,7 +215,7 @@ public class FirstPersonController3 : MonoBehaviour
         }
     }
 
-    private void HandleZoom(InputAction.CallbackContext context)
+    public void HandleZoom(InputAction.CallbackContext context)
     {
         if (canZoom)
         {

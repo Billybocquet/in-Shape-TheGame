@@ -19,7 +19,7 @@ public class OutlineSelection : MonoBehaviour
     [SerializeField] private int width;
     [SerializeField] private Color color;
 
-    private GravityGun2 gravityGun2;
+    private GravityGun3 gravityGun3;
     
     private Transform highlight;
     private Transform selection;
@@ -27,12 +27,12 @@ public class OutlineSelection : MonoBehaviour
 
     private void Start()
     {
-        gravityGun2 = GetComponent<GravityGun2>();
+        gravityGun3 = GetComponent<GravityGun3>();
     }
 
     void Update()
     {
-        if (!gravityGun2.grabbedRB)
+        if (!gravityGun3.grabbedRB)
         {
             Highligth();
         }
