@@ -2301,3 +2301,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkingTime: 3
+  scoreText: Player X Win
+  score: {fileID: 0}

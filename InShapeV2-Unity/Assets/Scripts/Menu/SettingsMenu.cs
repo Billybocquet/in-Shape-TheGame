@@ -9,6 +9,7 @@ using TMPro;
 public class SettingsMenu : MonoBehaviour
 {
 
+    [Header("Dropdown")]
     [SerializeField] private TMPro.TMP_Dropdown resolutionDropdown;
 
     Resolution[] resolutions;

@@ -51,6 +51,8 @@ public class ShapeSpawner : MonoBehaviour
 
             Vector3 randomSpawnPosition = spawnPoint.position;
             Instantiate(ShapePrefabList[randomShapeIndex], randomSpawnPosition, Quaternion.identity);
+
+            timer = spawnCooldown;
         }
     }
 
