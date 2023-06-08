@@ -308,22 +308,34 @@ public class FirstPersonController2 : MonoBehaviour
             {
                 if (!IsSprinting)
                 {
-                    robotAnimator.SetTrigger("Walk");
+                    robotAnimator.SetBool("Jump", false);
+                    robotAnimator.SetBool("Walk", true);
+                    robotAnimator.SetBool("Run", false);
+                    robotAnimator.SetBool("Idle", false);
                 }
                 else if (IsSprinting)
                 {
-                    robotAnimator.SetTrigger("Run");
+                    robotAnimator.SetBool("Jump", false);
+                    robotAnimator.SetBool("Walk", false);
+                    robotAnimator.SetBool("Run", true);
+                    robotAnimator.SetBool("Idle", false);
                 }
             }
             else if (currentInput == Vector2.zero)
             {
-                robotAnimator.SetTrigger("Idle");
+                robotAnimator.SetBool("Jump", false);
+                robotAnimator.SetBool("Walk", false);
+                robotAnimator.SetBool("Run", false);
+                robotAnimator.SetBool("Idle", true);
             }
             
         }
-        else
+        else if (!characterController.isGrounded)
         {
-            robotAnimator.SetTrigger("Jump");
+            robotAnimator.SetBool("Jump", true);
+            robotAnimator.SetBool("Walk", false);
+            robotAnimator.SetBool("Run", false);
+            robotAnimator.SetBool("Idle", false);
         }
     }
 }

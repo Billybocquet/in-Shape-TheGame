@@ -14,7 +14,7 @@ public class PauseMenu : MonoBehaviour
     [Header("UI Object")] 
     [SerializeField] private GameObject pauseMenuUI;
     
-    private static bool GameIsPaused = false;
+    private static bool GameIsPaused;
 
     public void Start()
     {
@@ -22,6 +22,9 @@ public class PauseMenu : MonoBehaviour
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
         playerInputActions.Player.Pause.performed += SetPause;
+
+        GameIsPaused = false;
+        Time.timeScale = 1f;
     }
 
     public void SetPause(InputAction.CallbackContext context)
