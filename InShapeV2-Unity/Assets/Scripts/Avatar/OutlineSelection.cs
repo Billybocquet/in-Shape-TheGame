@@ -9,6 +9,9 @@ public class OutlineSelection : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private Camera cam;
     
+    [Header("Parameters")]
+    [SerializeField] private float maxHighlightDistance;
+    
     [Header("LayerMask")]
     [SerializeField] private LayerMask layerMask;
 
@@ -17,7 +20,6 @@ public class OutlineSelection : MonoBehaviour
     [SerializeField] private Color color;
 
     private GravityGun3 gravityGun3;
-    private FirstPersonController3 firstPersonController3;
     
     private Transform highlight;
     private Transform selection;
@@ -47,7 +49,7 @@ public class OutlineSelection : MonoBehaviour
         
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         
-        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out hit, gravityGun3.maxGrabDistance, layerMask)) //Make sure you have EventSystem in the hierarchy before using EventSystem
+        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out hit, maxHighlightDistance, layerMask)) //Make sure you have EventSystem in the hierarchy before using EventSystem
         {
             highlight = hit.transform;
             if (highlight.CompareTag("Shape") && highlight != selection)
