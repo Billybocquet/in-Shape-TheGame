@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 4937932992655804932}
   - component: {fileID: 8370514413380799039}
   - component: {fileID: 7556283091815142938}
+  - component: {fileID: -8287803009224473260}
   m_Layer: 9
   m_Name: S
   m_TagString: Shape
@@ -261,6 +262,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Grab Wood
   onTower: 0
+--- !u!114 &-8287803009224473260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2171549155765798591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -719203684
+      Data2: 1268270219
+      Data3: 710635423
+      Data4: 916914066
+    Path: event:/Shapes/Crates
+  Event: 
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &7363129679280585227
 GameObject:
   m_ObjectHideFlags: 0
