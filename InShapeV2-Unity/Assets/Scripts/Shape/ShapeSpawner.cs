@@ -26,8 +26,7 @@ public class ShapeSpawner : MonoBehaviour
 
     [Header("Interact")] 
     [SerializeField] private string interactText;
-
-    public string soundEvent;
+    
     private void Start()
     {
         timer = 0;
@@ -53,7 +52,7 @@ public class ShapeSpawner : MonoBehaviour
 
             Vector3 randomSpawnPosition = spawnPoint.position;
             Instantiate(ShapePrefabList[randomShapeIndex], randomSpawnPosition, Quaternion.identity);
-            RuntimeManager.PlayOneShot(soundEvent);
+            RuntimeManager.PlayOneShot("event:/Environment/Button Press");
 
             timer = spawnCooldown;
         }

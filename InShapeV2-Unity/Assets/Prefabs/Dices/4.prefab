@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5293954004825356972}
   - component: {fileID: -5392622831815873038}
   - component: {fileID: 544137506275723199}
+  - component: {fileID: 3919166691079463976}
   m_Layer: 9
   m_Name: 4
   m_TagString: Shape
@@ -132,6 +133,37 @@ MonoBehaviour:
     Path: event:/Shapes/Dice
   Event: 
   PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &3919166691079463976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129072635641393025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1822999859
+      Data2: 1213708351
+      Data3: 708102804
+      Data4: -2065361305
+    Path: event:/Environment/Button Press
+  Event: 
+  PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0

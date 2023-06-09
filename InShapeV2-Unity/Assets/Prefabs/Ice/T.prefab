@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 5808375763031451361}
   - component: {fileID: 3733346137843655353}
   - component: {fileID: -2233844065742488039}
+  - component: {fileID: 6855795497246120686}
   m_Layer: 9
   m_Name: T
   m_TagString: Shape
@@ -367,6 +368,37 @@ MonoBehaviour:
     Path: event:/Shapes/Ice
   Event: 
   PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 30
+--- !u!114 &6855795497246120686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625314605092544158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1822999859
+      Data2: 1213708351
+      Data3: 708102804
+      Data4: -2065361305
+    Path: event:/Environment/Button Press
+  Event: 
+  PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using FMODUnity;
 public class GravityGun3 : MonoBehaviour
 {
     public bool CanGravityGun { get; private set; } = true;
@@ -41,11 +41,7 @@ public class GravityGun3 : MonoBehaviour
     [Header("Holder")]
     [SerializeField] private Transform objectHolder;
     [SerializeField] private Vector3 holderOrigin;
-
-    [Header("Emitter")] 
-    [SerializeField] private GameObject gravgunHover;
-    [SerializeField] private GameObject gravgunShoot;
-
+    
     [Header("Script")] 
     [SerializeField] private Laser2 laser2;
 
@@ -226,26 +222,6 @@ public class GravityGun3 : MonoBehaviour
         {
             gravityGunAnimator.SetTrigger("No");
         }
-    }
-
-    public void SoundGun(InputAction.CallbackContext context)
-    {
-        if (grabbedRB)
-        {
-            gravgunHover.gameObject.SetActive(true);
-        }
-        else if (!grabbedRB)
-        {
-            gravgunHover.gameObject.SetActive(false);
-        }
-
-        if (context.performed)
-        {
-            gravgunShoot.gameObject.SetActive(true);
-        }
-        else if (!context.performed)
-        {
-            gravgunShoot.gameObject.SetActive(false);
-        }
-    }
+    
+}
 }
