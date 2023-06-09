@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{cc82bc95-3ad1-4c51-856b-2aabee38e2d4}">
+		<property name="assetPath">
+			<value>wood2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5a68c26b-8798-47d1-8ce0-61c739527bec}</destination>
+		</relationship>
+	</object>
+</objects>
