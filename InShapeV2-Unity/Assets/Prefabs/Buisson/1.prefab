@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4141004345523119268}
   - component: {fileID: 4141004345523119267}
   - component: {fileID: 4141004345523119266}
-  - component: {fileID: -2605617193762137334}
   m_Layer: 9
   m_Name: 1
   m_TagString: Shape
@@ -33,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 6648602784501928826}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -130,34 +130,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactText: Grab Buisson
   onTower: 0
---- !u!114 &-2605617193762137334
-MonoBehaviour:
+--- !u!1001 &8134335261744753613
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4538912635256324939}
+    m_Modifications:
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349854735641413041, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+      propertyPath: m_Name
+      value: "Fum\xE9e"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+--- !u!4 &6648602784501928826 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3217368741806602423, guid: 407be06413fc6744ea8934a8d6e6dfbb, type: 3}
+  m_PrefabInstance: {fileID: 8134335261744753613}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3870461605092006385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 194223228
-      Data2: 1263050228
-      Data3: 783231142
-      Data4: 215201998
-    Path: event:/Shapes/Bushes
-  Event: 
-  PlayEvent: 7
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
