@@ -22,7 +22,7 @@ public class GravityGun3 : MonoBehaviour
     [SerializeField] private Animator gravityGunAnimator;
 
     [Header("Parameters")]
-    [SerializeField] private float maxGrabDistance;
+    public float maxGrabDistance;
     [SerializeField] private float throwForce;
     [SerializeField] private float lerpSpeed;
 

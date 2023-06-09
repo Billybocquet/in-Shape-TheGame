@@ -5,6 +5,7 @@ using FMOD;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using FMODUnity;
+using Debug = UnityEngine.Debug;
 
 public class FirstPersonController3 : MonoBehaviour
 {
@@ -334,21 +335,24 @@ public class FirstPersonController3 : MonoBehaviour
             {
                 if (!IsSprinting)
                 {
+                    Debug.Log("Walk");
                     robotAnimator.SetBool("Jump", false);
                     robotAnimator.SetBool("Walk", true);
                     robotAnimator.SetBool("Run", false);
                     robotAnimator.SetBool("Idle", false);
                 }
-                else if (IsSprinting)
+                else
                 {
+                    Debug.Log("Run");
                     robotAnimator.SetBool("Jump", false);
                     robotAnimator.SetBool("Walk", false);
                     robotAnimator.SetBool("Run", true);
                     robotAnimator.SetBool("Idle", false);
                 }
             }
-            else if (currentInput == Vector2.zero)
+            else
             {
+                Debug.Log("Idle");
                 robotAnimator.SetBool("Jump", false);
                 robotAnimator.SetBool("Walk", false);
                 robotAnimator.SetBool("Run", false);
@@ -356,8 +360,9 @@ public class FirstPersonController3 : MonoBehaviour
             }
             
         }
-        else if (!characterController.isGrounded)
+        else
         {
+            Debug.Log("Jump");
             robotAnimator.SetBool("Jump", true);
             robotAnimator.SetBool("Walk", false);
             robotAnimator.SetBool("Run", false);
