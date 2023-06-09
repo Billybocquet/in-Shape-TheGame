@@ -684,21 +684,21 @@ MonoBehaviour:
   playerInput: {fileID: 986589663707737259}
   cam: {fileID: 986589662861290353}
   gravityGunAnimator: {fileID: 986589663494393111}
-  maxGrabDistance: 3
-  throwForce: 20
+  maxGrabDistance: 5
+  throwForce: 25
   lerpSpeed: 10
   xRotation: {x: 15, y: 0, z: 0}
   yRotation: {x: 0, y: 15, z: 0}
   zRotation: {x: 0, y: 0, z: 15}
   speedRotation: 10
-  maxForward: 10
-  minForward: 2
+  maxForward: 13
+  minForward: 3
   speedForward: 5
   layerMask:
     serializedVersion: 2
     m_Bits: 512
   objectHolder: {fileID: 986589662048076365}
-  holderOrigin: {x: 0, y: 0, z: 0}
+  holderOrigin: {x: 0, y: 0, z: 4}
   laser2: {fileID: 1501225451215703919}
   grabbedRB: {fileID: 0}
   IsEditing: 0
