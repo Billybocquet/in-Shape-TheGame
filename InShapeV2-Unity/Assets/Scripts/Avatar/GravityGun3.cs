@@ -42,6 +42,10 @@ public class GravityGun3 : MonoBehaviour
     [SerializeField] private Transform objectHolder;
     [SerializeField] private Vector3 holderOrigin;
 
+    [Header("Emitter")] 
+    [SerializeField] private GameObject gravgunHover;
+    [SerializeField] private GameObject gravgunShoot;
+
     [Header("Script")] 
     [SerializeField] private Laser2 laser2;
 
@@ -221,6 +225,27 @@ public class GravityGun3 : MonoBehaviour
         else if (!grabbedRB)
         {
             gravityGunAnimator.SetTrigger("No");
+        }
+    }
+
+    public void SoundGun(InputAction.CallbackContext context)
+    {
+        if (grabbedRB)
+        {
+            gravgunHover.gameObject.SetActive(true);
+        }
+        else if (!grabbedRB)
+        {
+            gravgunHover.gameObject.SetActive(false);
+        }
+
+        if (context.performed)
+        {
+            gravgunShoot.gameObject.SetActive(true);
+        }
+        else if (!context.performed)
+        {
+            gravgunShoot.gameObject.SetActive(false);
         }
     }
 }

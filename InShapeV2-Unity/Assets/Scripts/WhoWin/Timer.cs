@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
 
     private Score score;
 
-    private float t;
+    [HideInInspector] public float t;
     
     private void Start()
     {
