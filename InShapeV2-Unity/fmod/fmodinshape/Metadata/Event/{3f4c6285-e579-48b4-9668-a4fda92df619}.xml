@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{3f4c6285-e579-48b4-9668-a4fda92df619}">
+		<property name="color">
+			<value>Cyan</value>
+		</property>
 		<property name="name">
 			<value>Menu</value>
 		</property>
@@ -120,7 +123,6 @@
 		<property name="length">
 			<value>160</value>
 		</property>
-		<property name="name" />
 		<relationship name="timeline">
 			<destination>{5be5a282-7a26-49f7-bb13-28357726a9a5}</destination>
 		</relationship>
