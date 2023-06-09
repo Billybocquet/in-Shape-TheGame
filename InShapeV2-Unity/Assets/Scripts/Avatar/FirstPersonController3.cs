@@ -1,10 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using FMOD;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using FMODUnity;
 
 public class FirstPersonController3 : MonoBehaviour
 {
@@ -12,8 +10,6 @@ public class FirstPersonController3 : MonoBehaviour
     private bool ShouldSprint => characterController.isGrounded;
     private bool ShouldJump => characterController.isGrounded;
     private bool ShouldCrouch => !duringCrouchAnimation && characterController.isGrounded;
-
-    private FMOD.Studio.EventInstance jump;
 
     [Header("Functional Options")] 
     [SerializeField] private bool canSprint = true;
@@ -67,11 +63,6 @@ public class FirstPersonController3 : MonoBehaviour
     private float defaultFOV;
     private Coroutine zoomRoutine;
 
-    [Header("Walk Sound")] 
-    [SerializeField] private FootstepManager footstepManager;
-    [SerializeField] private float footstepSpeed;
-    [SerializeField] private float timerr;
-
     [Header("Arnimator")]
     [SerializeField] private Animator robotAnimator;
     private Vector3 lastPosition;
@@ -86,7 +77,6 @@ public class FirstPersonController3 : MonoBehaviour
     private bool IsSprinting;
 
     private GravityGun3 gravityGun3;
-
     private bool IsSliding
     {
         get
@@ -141,8 +131,6 @@ public class FirstPersonController3 : MonoBehaviour
             ApplyFinalMovement();
             
             AnimationPlayer();
-            
-            
         }
     }
 
@@ -200,10 +188,6 @@ public class FirstPersonController3 : MonoBehaviour
             {
                 //Debug.Log("Jump!" + context.phase);
                 moveDirection.y = jumpForce;
-                if (characterController.isGrounded)
-                {
-                    FMODUnity.RuntimeManager.PlayOneShot("event:/Players/Jump");
-                }
             }
     }
 
@@ -270,14 +254,6 @@ public class FirstPersonController3 : MonoBehaviour
             moveDirection += new Vector3(hitPointNormal.x, -hitPointNormal.y, hitPointNormal.z) * slopeSpeed;
 
         characterController.Move(moveDirection * Time.deltaTime);
-        
-        if (timerr > footstepSpeed&&characterController.velocity.magnitude >= 0.05)
-        {
-            footstepManager.PlayFootstep();
-            timerr = 0.0f;
-        }
-
-        timerr += Time.deltaTime;
     }
 
     private IEnumerator CrouchStand()
