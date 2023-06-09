@@ -1283,6 +1283,69 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &183819317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183819319}
+  - component: {fileID: 183819318}
+  m_Layer: 15
+  m_Name: gravgunShoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &183819318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183819317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1050721417
+      Data2: 1158960247
+      Data3: 1922683039
+      Data4: -724140615
+    Path: event:/Players/GravgunShoot
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &183819319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183819317}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1730059790}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &185660172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2261,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31150
+  m_Name: pb_Mesh57932
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5261,6 +5324,101 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7aba1b340f5560d4ea8a4b3ae3831a75, type: 3}
+--- !u!1 &636067172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636067175}
+  - component: {fileID: 636067174}
+  - component: {fileID: 636067173}
+  m_Layer: 15
+  m_Name: gravgunHover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &636067173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636067172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 383621864
+      Data2: 1316599984
+      Data3: -2017916023
+      Data4: -1147616221
+    Path: event:/Players/GravgunOff
+  Event: 
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &636067174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636067172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 976795892
+      Data2: 1112144351
+      Data3: -644176738
+      Data4: 225045582
+    Path: event:/Players/GravgunOn
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &636067175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636067172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1730059790}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &636977342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23397,6 +23555,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7aba1b340f5560d4ea8a4b3ae3831a75, type: 3}
+--- !u!1 &1221104695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 986589663707737251, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+  m_PrefabInstance: {fileID: 1800068233}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224121438 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7aba1b340f5560d4ea8a4b3ae3831a75, type: 3}
@@ -24200,6 +24363,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1347697858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 986589663707737251, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+  m_PrefabInstance: {fileID: 1730059762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1363669404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25406,6 +25574,69 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7aba1b340f5560d4ea8a4b3ae3831a75, type: 3}
+--- !u!1 &1471088560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471088561}
+  - component: {fileID: 1471088562}
+  m_Layer: 15
+  m_Name: gravgunShoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1471088561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471088560}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878819517}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1471088562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471088560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1050721417
+      Data2: 1158960247
+      Data3: 1922683039
+      Data4: -724140615
+    Path: event:/Players/GravgunShoot
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1487593569
 GameObject:
   m_ObjectHideFlags: 0
@@ -25473,6 +25704,7 @@ MonoBehaviour:
   spawnCooldown: 5
   spawnPoint: {fileID: 266980849}
   interactText: Interact With Spawner
+  soundEvent: 
 --- !u!64 &1487593571
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26743,7 +26975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487593569}
   m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -8, y: 0.75, z: 8}
+  m_LocalPosition: {x: -8, y: 0.454, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27068,6 +27300,7 @@ MonoBehaviour:
   spawnCooldown: 10
   spawnPoint: {fileID: 1721102750}
   interactText: Interact With Spawner
+  soundEvent: Button Press
 --- !u!64 &1517421756
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28338,7 +28571,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517421754}
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: 8, y: 0.75, z: -8}
+  m_LocalPosition: {x: 8, y: 0.482, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -38464,6 +38697,8 @@ GameObject:
   - component: {fileID: 1642861841}
   - component: {fileID: 1642861843}
   - component: {fileID: 1642861842}
+  - component: {fileID: 1642861845}
+  - component: {fileID: 1642861846}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -38515,6 +38750,7 @@ MonoBehaviour:
   textMeshProUGUI: {fileID: 482986044}
   slider: {fileID: 1629342881}
   scoreText: Nobody win...
+  t: 0
 --- !u!4 &1642861844
 Transform:
   m_ObjectHideFlags: 0
@@ -38530,6 +38766,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 144
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642861845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642861840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -942242405
+      Data2: 1088480618
+      Data3: -436542292
+      Data4: -707073125
+    Path: event:/Music/Main
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1642861846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642861840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455e30f25ce526646be559ff4b5ca8ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1646112470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38985,6 +39264,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7342407571344367217, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: gravgunHover
+      value: 
+      objectReference: {fileID: 636067172}
+    - target: {fileID: -7342407571344367217, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: gravgunShoot
+      value: 
+      objectReference: {fileID: 183819317}
+    - target: {fileID: -3513594106846791059, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: footstepSpeed
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: -3513594106846791059, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: footstepManager
+      value: 
+      objectReference: {fileID: 1642861846}
     - target: {fileID: 62692609578393822, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -39479,7 +39774,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 986589663707737257, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
   m_PrefabInstance: {fileID: 1730059762}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1347697858}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d389b77417a6c3439a185b416b54734, type: 3}
@@ -39560,12 +39855,61 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7342407571344367217, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
   m_PrefabInstance: {fileID: 1730059762}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1347697858}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523cb65ca0ff7c242822fa0f258eb25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1730059780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347697858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 728824839
+      Data2: 1258018951
+      Data3: 862830216
+      Data4: 851271441
+    Path: event:/Players/Walk
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1730059781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347697858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!4 &1730059790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 986589663707737253, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+  m_PrefabInstance: {fileID: 1730059762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1735630640
 GameObject:
   m_ObjectHideFlags: 0
@@ -39700,6 +40044,101 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: 7aba1b340f5560d4ea8a4b3ae3831a75, type: 3}
+--- !u!1 &1749943887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749943888}
+  - component: {fileID: 1749943890}
+  - component: {fileID: 1749943889}
+  m_Layer: 15
+  m_Name: gravgunHover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1749943888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749943887}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 20, y: 0, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878819517}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749943889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749943887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 383621864
+      Data2: 1316599984
+      Data3: -2017916023
+      Data4: -1147616221
+    Path: event:/Players/GravgunOff
+  Event: 
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1749943890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749943887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 976795892
+      Data2: 1112144351
+      Data3: -644176738
+      Data4: 225045582
+    Path: event:/Players/GravgunOn
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1750233874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40542,6 +40981,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7342407571344367217, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: gravgunHover
+      value: 
+      objectReference: {fileID: 1749943887}
+    - target: {fileID: -7342407571344367217, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: gravgunShoot
+      value: 
+      objectReference: {fileID: 1471088560}
+    - target: {fileID: -3513594106846791059, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: footstepSpeed
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: -3513594106846791059, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: footstepManager
+      value: 
+      objectReference: {fileID: 1642861846}
     - target: {fileID: 383634171862820238, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -40678,6 +41133,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1237354116915458416, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.98021
+      objectReference: {fileID: 0}
     - target: {fileID: 1305210160229527619, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -40754,6 +41213,18 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key0.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3340995961141518616, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 9.318312
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340995961141518616, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 97.12634
+      objectReference: {fileID: 0}
+    - target: {fileID: 3340995961141518616, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 167.41457
+      objectReference: {fileID: 0}
     - target: {fileID: 3360624296817173107, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -40769,6 +41240,26 @@ PrefabInstance:
     - target: {fileID: 3362214572238724093, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624660317861986935, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 8.860617
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624660317861986935, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 83.85679
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624660317861986935, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -153.5064
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803079956268301117, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803079956268301117, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.7329552
       objectReference: {fileID: 0}
     - target: {fileID: 4334184473744100717, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
@@ -40842,6 +41333,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6078590150767115540, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.000007683962
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078590150767115540, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078590150767115540, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -164.70277
+      objectReference: {fileID: 0}
     - target: {fileID: 6302513168109080103, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -40849,6 +41352,18 @@ PrefabInstance:
     - target: {fileID: 6388550365041739781, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467285393422709150, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.000015794812
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467285393422709150, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467285393422709150, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 165.58205
       objectReference: {fileID: 0}
     - target: {fileID: 6660707099478197787, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
@@ -40898,6 +41413,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8630907146323521871, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.092206e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630907146323521871, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.9326288e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630907146323521871, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -6.705153e-35
+      objectReference: {fileID: 0}
     - target: {fileID: 8776978570110178291, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -40919,7 +41446,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 986589663707737259, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
   m_PrefabInstance: {fileID: 1800068233}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1221104695}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -40930,7 +41457,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 986589663707737257, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
   m_PrefabInstance: {fileID: 1800068233}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1221104695}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d389b77417a6c3439a185b416b54734, type: 3}
@@ -44872,7 +45399,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31078
+  m_Name: pb_Mesh57860
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -45035,12 +45562,61 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -7342407571344367217, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
   m_PrefabInstance: {fileID: 1800068233}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1221104695}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523cb65ca0ff7c242822fa0f258eb25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1878819517 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 986589663707737253, guid: f6a4f13f0d1fd4247a09a5fd47cdb632, type: 3}
+  m_PrefabInstance: {fileID: 1800068233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1878819520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221104695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1002370307
+      Data2: 1298869490
+      Data3: -143582320
+      Data4: -2136216246
+    Path: event:/Players/Jump
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1878819521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221104695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1880137862
 GameObject:
   m_ObjectHideFlags: 0
@@ -46219,7 +46795,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30706
+  m_Name: pb_Mesh57488
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46820,7 +47396,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh31112
+  m_Name: pb_Mesh57894
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -47837,6 +48413,8 @@ GameObject:
   - component: {fileID: 2146108132}
   - component: {fileID: 2146108131}
   - component: {fileID: 2146108130}
+  - component: {fileID: 2146108133}
+  - component: {fileID: 2146108134}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -47906,3 +48484,65 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2146108133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146108129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1768234065
+      Data2: 1106328421
+      Data3: 1951122598
+      Data4: 1393580843
+    Path: event:/UI/Pause
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2146108134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146108129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1768234065
+      Data2: 1106328421
+      Data3: 1951122598
+      Data4: 1393580843
+    Path: event:/UI/Pause
+  Event: 
+  PlayEvent: 12
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
